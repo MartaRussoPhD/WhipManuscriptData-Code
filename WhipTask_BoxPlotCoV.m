@@ -1,5 +1,10 @@
 function WhipTask_BoxPlotCoV(ParTab,rgbmystyle,ParamName,varargin)
 
+% Computes coefficient of variation (SD/mean or IQR/median for non-parametric approximation) across ~30 trials 
+% of each participant, each style, each block. 
+% Plots a boxplot of the values, pooling 16 participant values.
+% Runs a linear mixed model (fitted iteratively) and displays fixed effect estimates and p-values in the figure.
+
 indPar = find(strcmpi(ParTab.Properties.VariableNames,ParamName));
 if isempty(indPar)
     disp('Parameter not found in the table. Check name spelling');
