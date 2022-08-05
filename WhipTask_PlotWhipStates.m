@@ -1,5 +1,9 @@
 function WhipTask_PlotWhipStates(WhipTask_TimeSeries)
 
+% Using whip marker and handle positions measured at the Peak Hand Speed landmark, 
+% plots the whip snapshots from every trial, where handle positions are translated to the same coordinate for display.
+% Each whip snapshot is colored with respect to Error acquired in the respective trial.
+
 StyleNames = {'Discrete','Rhythmic'};
 
 % Prepare color palette
