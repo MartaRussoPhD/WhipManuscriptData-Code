@@ -5,10 +5,8 @@ function ParamChangeModelOut = ParamChangeOverTrials(ParTab,rgbmystyle,ParamName
 % The models are fitted iteratively. a) testing whether random effects (intercepts) are needed.
 % b) testing whether fixed interaction is needed. c) if b) confirms, continuing with more random
 % effect terms, up to random interaction. Iteratively compares via ML-criterion.
-% The model handles binary parameters well.
 
-%%%%% ADD EMBEDDED SIMPLE TEST FOR NORMALITY? To justify using mean/median for simple LM?..
-% ______ Accepts as input a table with per-trial parameters (must have Style and Block
+% ______ Accepts a table with per-trial parameters (must have Style and Block
 % columns), my color palette, parameter name. Optional flags are available (see below)
 
 % ______ Returns a structure with an LM object, an LMER object, LMER coefficient test table (t-test, using
