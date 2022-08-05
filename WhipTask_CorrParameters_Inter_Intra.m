@@ -1,4 +1,4 @@
-function CorrModelOut = CorrParameters_Inter_Intra(ParTab,rgbmystyle,ParamName,ParamName2,varargin)
+function CorrModelOut = WhipTask_CorrParameters_Inter_Intra(ParTab,rgbmystyle,ParamName,ParamName2,varargin)
 % 1. Runs a simple linear model on the parameters mean  (one value per
 % subject per block). Specify 'NonNormal' to use median for the parameter. Chooses the
 % model with or without interaction, by ML-criterion (chi-sq statistic with the F-test).
@@ -8,13 +8,9 @@ function CorrModelOut = CorrParameters_Inter_Intra(ParTab,rgbmystyle,ParamName,P
 % whether fixed interaction is needed. c) if b) confirms, continuing with more random
 % effect terms, up to random interaction. Iteratively compares via ML-criterion.
 % The model handles binary parameters well.
-%%%% ADD support for only-one-style parameters (the rest nan).
-%%%%% ADD EMBEDDED SIMPLE TEST FOR NORMALITY? To justify using mean/median for simple LM?..
 
-%%%%% ADD EMBEDDED SIMPLE TEST FOR NORMALITY? To justify using mean/median for simple LM?..
-% ______ Accepts as input a table with per-trial parameters (must have Style and Block
+% ______ Accepts a table with per-trial parameters (must have Subj, Style, and Block
 % columns), my color palette, parameter name 1 and 2. Optional flags are available (see below)
-
 
 % ______ Returns a structure with an LM object, an LMER object, LMER coefficient test table (t-test, using
 % satterthwaite method for dofs, 95% CI included), random coefficients for participants
