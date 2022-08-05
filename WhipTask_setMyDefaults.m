@@ -1,5 +1,6 @@
 function setMyDefaults()
-    
+ % Prettier figure background and labels.   
+ 
     set(0,'defaultTextFontSize',12)
     set(0,'defaultTextFontName','Arial')
     set(0,'defaultFigureColor',[1 1 1])
