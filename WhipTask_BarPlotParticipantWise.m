@@ -1,6 +1,8 @@
 function WhipTask_BarPlotParticipantWise(ParTab,rgbmystyle,ParamName,varargin)
 
-% DESCRIPTION
+% Using the per-trial data, this function creates a barplot for 16 subjects in 2 styles (Discrete and Rhythmic)
+% Barplots (and error-bars) are computed as mean and SD values across 5 block means (medians with flag) for each subject-style
+% Participants are ranked according to grand-median error of each participant, from best to worst.
 
 
 indPar = find(strcmpi(ParTab.Properties.VariableNames,ParamName));
